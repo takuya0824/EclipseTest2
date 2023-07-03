@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<title>問い合わせフォーム</title>
+</head>
+<body>
+  <form action="InquiryResult" method="post" th:object="${dataForm}">
+    <div>
+      名前<br> 
+      <input th:field="*{name}" type="text">
+    </div>
+    <div>
+      メールアドレス<br>
+      <input th:field="*{mail}" type="email">
+    </div>
+    <div>
+      年齢<br>
+      <input th:field="*{age}" type="text">
+    </div>
+    <div>
+      性別<br>
+      <input th:field="*{gender}" type="radio" value="男性">男性
+      <input th:field="*{gender}" type="radio" value="女性">女性
+    </div>
+    <br>
+    <div>
+      <input value="送信" type="submit">
+    </div>
+  </form>
+
+</body>
+</html>
